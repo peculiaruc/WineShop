@@ -1,57 +1,50 @@
 package com.peculiaruc.wineshop.adapter
 
+import android.content.ClipData
+import android.content.Intent
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.peculiaruc.wineshop.R
+import com.peculiaruc.wineshop.fragment.DetailFragment
+import com.peculiaruc.wineshop.model.Wine
 
-class WineAdapter : RecyclerView.Adapter<WineAdapter.ViewHolder>() {
+class WineAdapter(val wineList: ArrayList<Wine> ) : RecyclerView.Adapter<WineAdapter.ViewHolder>() {
 
-    private val name = arrayOf(
-            "Chamdor", "Chateau De Fleur", "Martinellis"
-    )
-
-    private val colour = arrayOf(
-            "Red", " Milk Color", "Dark Red"
-    )
-
-    private val price = arrayOf("#3000", "#2500", "#5000"
-
-    )
-
-    private  val image = arrayOf(
-            "chamdor", "chateau_de_fleur", "martnellis"
-    )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        TODO("Not yet implemented")
+        val v = LayoutInflater.from(parent.context)
+                .inflate(R.layout.list_wine_item, parent, false)
+        return ViewHolder(v)
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return wineList.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.bindItem(wineList[position])
     }
 
 
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        var itemName : TextView
-        var itemColour: TextView
-        var itemPrice: TextView
-        var itemImage: ImageView
+       fun bindItem(wine: Wine){
+           val textName = itemView.findViewById<TextView>(R.id.text_name)
+           val textColour = itemView.findViewById<TextView>(R.id.text_colour)
+           val textPrice = itemView.findViewById<TextView>(R.id.textprice)
+           val imageWine = itemView.findViewById<ImageView>(R.id.imageView_wine)
+           textName.text = wine.name
+           textColour.text = wine.colour
+           textPrice.text = wine.price.toString()
 
-        init {
-            itemName = itemView.findViewById(R.id.text_name)
-            itemColour = itemView.findViewById(R.id.text_colour)
-            itemPrice = itemView.findViewById(R.id.textprice)
-            itemImage = itemView.findViewById(R.id.imageView_wine)
-        }
+
+       }
+
     }
 
 }
