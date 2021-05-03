@@ -8,9 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.peculiaruc.wineshop.R
-import com.peculiaruc.wineshop.model.WineData
+import com.peculiaruc.wineshop.model.WineModel
 
-class WineAdapter(val context: Context, val wineList: List<WineData> ) : RecyclerView.Adapter<WineAdapter.ViewHolder>() {
+class WineAdapter(val context: Context, val wineList: List<WineModel> ) : RecyclerView.Adapter<WineAdapter.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -38,7 +38,7 @@ class WineAdapter(val context: Context, val wineList: List<WineData> ) : Recycle
          lateinit var imageWine: ImageView
          var pos = -1
 
-       fun bindItem(wine: WineData){
+       fun bindItem(wine: WineModel){
            textName = itemView.findViewById(R.id.text_name)
            textColour = itemView.findViewById(R.id.text_colour)
            textPrice = itemView.findViewById(R.id.textprice)
