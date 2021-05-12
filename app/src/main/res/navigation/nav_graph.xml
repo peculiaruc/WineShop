@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/wineFragment"
-        android:name="com.peculiaruc.wineshop.fragment.WineFragment"
+        android:name="com.peculiaruc.wineshop.fragment.winemain.WineMianFragment"
         android:label="fragment_wine"
         tools:layout="@layout/fragment_wine" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.peculiaruc.wineshop.fragment.DetailFragment"
+        android:name="com.peculiaruc.wineshop.fragment.winedetail.WineDetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
 </navigation>

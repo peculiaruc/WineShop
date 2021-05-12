@@ -1,4 +1,4 @@
-package com.peculiaruc.wineshop.fragment
+package com.peculiaruc.wineshop.fragment.winedetail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.peculiaruc.wineshop.R
 
 
-class DetailFragment : Fragment() {
+class WineDetailFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -16,6 +16,6 @@ class DetailFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_detail, container, false)
-    }
 
+    }
 }
