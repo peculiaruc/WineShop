@@ -8,37 +8,25 @@ import com.peculiaruc.wineshop.databinding.ListWineItemBinding
 import com.peculiaruc.wineshop.model.Drink
 
 class WineAdapter(
-        private val drink: List<Drink>, private val listener:(Drink)->Unit) : RecyclerView.Adapter<WineAdapter.WineViewHolder>() {
-
-
+        private val drink: List<Drink>, private val listener:(Drink)->Unit):
+    RecyclerView.Adapter<WineAdapter.WineViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WineViewHolder {
        return WineViewHolder(
                ListWineItemBinding.inflate(
                        LayoutInflater.from(parent.context), parent, false))
-
     }
-
-    override fun getItemCount(): Int {
-        return drink.size
-    }
+    override fun getItemCount(): Int =  drink.size
 
     override fun onBindViewHolder(holder: WineViewHolder, position: Int) {
-        holder.bindItem(drink[position])
+        val data: Drink = drink[position]
 
-    }
-
-    inner class WineViewHolder(private val binding: ListWineItemBinding): RecyclerView.ViewHolder(binding.root){
-
-
-        fun bindItem(drink: Drink){
-            binding.textName.text = drink.drinkName
-            binding.imageViewWine.load(drink.drinkThumb)
-            binding.root.setOnClickListener {
-                listener.invoke(drink)
-            }
-
+        with(holder.binding){
+            textName.text = data.drinkName
+            imageViewWine.load(data.drinkThumb)
+            root.setOnClickListener { listener.invoke(data) }
         }
-
     }
+    class WineViewHolder( val binding: ListWineItemBinding): RecyclerView.ViewHolder(binding.root)
+
 }

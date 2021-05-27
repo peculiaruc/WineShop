@@ -3,6 +3,7 @@ buildscript {
     ext{kotlin_version = "1.3.72"
         version_kotlin_coroutines = "1.3.7"
         version_lifecycle = "2.2.0"
+        version_arch = "2.1.0"
         version_moshi = "1.9.3"
         version_navigation = "1.0.0"
         version_retrofit = "2.9.0"}

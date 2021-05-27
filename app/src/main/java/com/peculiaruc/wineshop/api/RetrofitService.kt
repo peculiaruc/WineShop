@@ -26,13 +26,13 @@ interface RetrofitService {
     suspend fun getDrinkDetails(@Query("i")drinkId:String): DrinkDeatailsResponse
 }
 
-//add retrofit library
+      //add retrofit library
 val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
 
 val retrofit = Retrofit.Builder().addConverterFactory(MoshiConverterFactory.create(moshi))
     .baseUrl(BASE_URL).build()
 
-//create a signton for easly accessing the api service
+       //create a signton for easily accessing the api service
 object Api {
     val retrofitService: RetrofitService by lazy {
         retrofit.create(RetrofitService::class.java)

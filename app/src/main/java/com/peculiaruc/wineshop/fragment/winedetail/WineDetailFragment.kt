@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import coil.load
 import com.peculiaruc.wineshop.R
+import com.peculiaruc.wineshop.adapter.WineAdapter
 import com.peculiaruc.wineshop.api.Api
 import com.peculiaruc.wineshop.api.Repository
 import com.peculiaruc.wineshop.databinding.FragmentDetailBinding
@@ -17,8 +19,9 @@ import com.peculiaruc.wineshop.model.DrinkDetail
 
 class WineDetailFragment : Fragment() {
 
-    private var binding:FragmentDetailBinding? = null
+    private lateinit var binding:FragmentDetailBinding
     private val drinksDetail = mutableListOf<DrinkDetail>()
+
 
     private val  viewModel: WineDetailViewModel by lazy {
         ViewModelProvider(this, WineDetailViewModelFactory(Repository(Api.retrofitService)))
@@ -30,7 +33,7 @@ class WineDetailFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
        binding = FragmentDetailBinding.inflate(inflater, container, false)
-        return binding?.root
+        return binding.root
 
     }
 
@@ -45,6 +48,8 @@ class WineDetailFragment : Fragment() {
         viewModel.drinksDetailLiveData.observe(viewLifecycleOwner, Observer {
             drinksDetail.addAll(it)
         })
-       // binding?
+        binding.textInstruction.text = drinksDetail[0].instructions
+        binding.imageThumbs.load(drinksDetail[0].drinkThumb)
+        activity?.title = drinksDetail[0].drinkName
     }
 }

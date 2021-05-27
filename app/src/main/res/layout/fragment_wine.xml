@@ -17,5 +17,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/list_wine_item" />
+        tools:listitem="@layout/list_wine_item"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

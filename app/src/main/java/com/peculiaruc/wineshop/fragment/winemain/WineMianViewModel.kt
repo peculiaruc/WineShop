@@ -15,8 +15,7 @@ class WineMianViewModel(private val repository: Repository): ViewModel() {
     private val TAG = WineMianViewModel::class.java.simpleName
 
     private val _drinkLiveData = MutableLiveData<List<Drink>>()
-    val drinkLiveData: LiveData<List<Drink>>
-        get() = _drinkLiveData
+    val drinkLiveData: LiveData<List<Drink>> = _drinkLiveData
 
     init {
         fetchDrinks()

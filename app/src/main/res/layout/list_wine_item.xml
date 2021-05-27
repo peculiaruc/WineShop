@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_pertanyaan"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="200dp"
     android:layout_marginLeft="16dp"
     android:layout_marginTop="12dp"
     android:layout_marginRight="16dp"
@@ -12,56 +12,36 @@
     android:foreground="?selectableItemBackground"
     card_view:cardBackgroundColor="#FFFF"
     card_view:cardCornerRadius="14dp"
-    card_view:cardElevation="16dp"
-    card_view:contentPadding="10dp">
+    card_view:cardElevation="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imageView_wine"
-            android:layout_width="116dp"
-            android:layout_height="71dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:foreground="@drawable/gradient"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            android:scaleType="centerCrop"
             card_view:srcCompat="@drawable/ic_launcher_background" />
 
         <TextView
             android:id="@+id/text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text=" "
-            android:textColor="#000000"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:text="sample drink "
+            android:textColor="#ffffff"
             android:textSize="18sp"
+            android:inputType="text"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/imageView_wine" />
+            card_view:layout_constraintBottom_toBottomOf="parent" />
 
-        <!--        <TextView-->
-        <!--            android:id="@+id/text_colour"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginStart="8dp"-->
-        <!--            android:layout_marginTop="8dp"-->
-        <!--            android:text="Colour"-->
-        <!--            android:textColor="#660477"-->
-        <!--            android:textSize="12sp"-->
-        <!--            card_view:layout_constraintStart_toEndOf="@+id/imageView_wine"-->
-        <!--            card_view:layout_constraintTop_toBottomOf="@+id/text_name" />-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/textprice"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="Price"-->
-        <!--            android:textColor="#F3A809"-->
-        <!--            android:textSize="14sp"-->
-        <!--            card_view:layout_constraintBottom_toBottomOf="parent"-->
-        <!--            card_view:layout_constraintEnd_toEndOf="parent"-->
-        <!--            card_view:layout_constraintHorizontal_bias="0.773"-->
-        <!--            card_view:layout_constraintStart_toEndOf="@+id/text_colour"-->
-        <!--            card_view:layout_constraintTop_toBottomOf="@+id/text_name"-->
-        <!--            card_view:layout_constraintVertical_bias="0.294" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
