@@ -13,11 +13,9 @@ class WineDetailViewModel(private val repository: Repository): ViewModel() {
 
     private val _drinksDetailLiveData = MutableLiveData<List<DrinkDetail>>()
 
-    val drinksDetailLiveData:  LiveData<List<DrinkDetail>>
-    get() = _drinksDetailLiveData
+    val drinksDetailLiveData:  LiveData<List<DrinkDetail>> = _drinksDetailLiveData
 
     private  val TAG = WineDetailViewModel::class.java.simpleName
-
 
     fun fetchDrinkDetail(id: String){
         try {

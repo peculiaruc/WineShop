@@ -35,7 +35,7 @@ class WineMianFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentWineBinding.inflate(layoutInflater, container, false)
-        return binding?.root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -43,12 +43,11 @@ class WineMianFragment : Fragment() {
 
         viewModel.drinkLiveData.observe(viewLifecycleOwner, Observer {
             drinks.addAll(it)
-            binding?.recyclerview?.visibility = View.VISIBLE
+            binding.recyclerview.visibility = View.VISIBLE
 
             val wineAdapter = WineAdapter(this.drinks) {
                 findNavController().navigate(R.id.action_wineFragment_to_detailFragment,
-                        bundleOf(ID_ARGS to it.drinkId))
-            }
+                        bundleOf(ID_ARGS to it.drinkId)) }
 
             with(binding) {
                 recyclerview.apply {

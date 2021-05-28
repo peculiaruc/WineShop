@@ -46,10 +46,10 @@ class WineDetailFragment : Fragment() {
         }
         viewModel.fetchDrinkDetail(id)
         viewModel.drinksDetailLiveData.observe(viewLifecycleOwner, Observer {
-            drinksDetail.addAll(it)
+            binding.textInstruction.text = it[0].instructions
+            binding.imageThumbs.load(it[0].drinkThumb)
+            activity?.title = it[0].drinkName
         })
-        binding.textInstruction.text = drinksDetail[0].instructions
-        binding.imageThumbs.load(drinksDetail[0].drinkThumb)
-        activity?.title = drinksDetail[0].drinkName
+
     }
 }
