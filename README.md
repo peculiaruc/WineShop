@@ -8,7 +8,7 @@
   
  <td>
      
-  ![HomeScreen](https://github.com/peculiaruc/WineShop/blob/master/screenshops/device-2021-05-28-214021.png) 
+  ![HomeScreen](https://github.com/peculiaruc/WineShop/blob/master/screenshops/device-2021-05-28-214922.png) 
          
  </td>
    
