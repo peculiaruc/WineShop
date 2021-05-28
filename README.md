@@ -20,3 +20,14 @@
  
  </tr>
 </table>
+
+## Libraries Used
+
+* Retrofit
+* ViewModel
+* LiveData
+* Moshi
+* Coroutines
+* Navigation Components
+* Coil
+* MVVM
