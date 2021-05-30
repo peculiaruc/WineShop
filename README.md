@@ -15,7 +15,7 @@ An app that displays the different types of wine and their details
    
   <td>
    
-  ![DetailScreen](https://github.com/peculiaruc/WineShop/blob/master/screenshops/device-2021-05-28-214021.png) 
+  ![DetailScreen](https://github.com/peculiaruc/WineShop/blob/master/screenshops/device-2021-05-30-024334.png) 
        
  </td>
  
