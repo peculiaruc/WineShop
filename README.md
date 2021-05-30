@@ -1,4 +1,5 @@
 # WineShop
+An app that displays the different types of wine and their details
 
 
 
