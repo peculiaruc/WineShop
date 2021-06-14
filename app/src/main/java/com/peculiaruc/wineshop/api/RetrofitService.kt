@@ -1,6 +1,6 @@
 package com.peculiaruc.wineshop.api
 
-import com.peculiaruc.wineshop.model.response.DrinkDeatailsResponse
+import com.peculiaruc.wineshop.model.response.DrinkDetailsResponse
 import com.peculiaruc.wineshop.model.response.DrinkResponse
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -23,7 +23,7 @@ interface RetrofitService {
     suspend fun getDrinks(@Query("a")drink: String): DrinkResponse
 
     @GET("1/lookup.php")
-    suspend fun getDrinkDetails(@Query("i")drinkId:String): DrinkDeatailsResponse
+    suspend fun getDrinkDetails(@Query("i")drinkId:String): DrinkDetailsResponse
 }
 
       //add retrofit library

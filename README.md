@@ -1,5 +1,5 @@
 # WineShop
-An app that displays the different types of Non-Alcolic wines and their details
+An app that displays the different types of Non-Alcoholic wines and their details
 
 
 

@@ -46,6 +46,8 @@ class WineMianFragment : Fragment() {
             binding.recyclerview.visibility = View.VISIBLE
 
             val wineAdapter = WineAdapter(this.drinks) {
+
+               // val directions: NavDirections = WineFragmentDirection.wineAction
                 findNavController().navigate(R.id.action_wineFragment_to_detailFragment,
                         bundleOf(ID_ARGS to it.drinkId)) }
 
