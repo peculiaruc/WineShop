@@ -1,7 +1,6 @@
-package com.peculiaruc.wineshop.fragment.winemain
+package com.peculiaruc.wineshop.ui.fragment.winemain
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,14 +8,12 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.peculiaruc.wineshop.R
 import com.peculiaruc.wineshop.adapter.WineAdapter
 import com.peculiaruc.wineshop.api.Api
-import com.peculiaruc.wineshop.api.Repository
+import com.peculiaruc.wineshop.db.Repository
 import com.peculiaruc.wineshop.databinding.FragmentWineBinding
 import com.peculiaruc.wineshop.model.Drink
 
@@ -27,7 +24,7 @@ class WineMianFragment : Fragment() {
     private lateinit var adapter: WineAdapter
 
     private val viewModel: WineMianViewModel by lazy {
-        ViewModelProvider(this, WineViewModelFactory(Repository(Api.retrofitService)))
+        ViewModelProvider(this, WineViewModelFactory(Repository(Api.retrofitService, requireContext())))
             .get(WineMianViewModel::class.java)
     }
     override fun onCreateView(

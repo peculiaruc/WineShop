@@ -1,7 +1,8 @@
-package com.peculiaruc.wineshop
+package com.peculiaruc.wineshop.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.peculiaruc.wineshop.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
