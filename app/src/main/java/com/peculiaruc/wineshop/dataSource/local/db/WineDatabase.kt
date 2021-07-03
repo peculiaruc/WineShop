@@ -1,4 +1,4 @@
-package com.peculiaruc.wineshop.db
+package com.peculiaruc.wineshop.dataSource.local.db
 
 import android.content.Context
 import androidx.room.Database

@@ -1,4 +1,4 @@
-package com.peculiaruc.wineshop.ui.fragment.winemain
+package com.peculiaruc.wineshop.ui.fragment.wineNonAcoholic
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,11 +13,11 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.peculiaruc.wineshop.R
 import com.peculiaruc.wineshop.adapter.WineAdapter
 import com.peculiaruc.wineshop.api.Api
-import com.peculiaruc.wineshop.db.Repository
+import com.peculiaruc.wineshop.dataSource.Repository
 import com.peculiaruc.wineshop.databinding.FragmentWineBinding
 import com.peculiaruc.wineshop.model.Drink
 
-class WineMianFragment : Fragment() {
+class WineMainFragment : Fragment() {
 
     private lateinit var binding: FragmentWineBinding
     private var drinks = mutableListOf<Drink>()
@@ -45,7 +45,7 @@ class WineMianFragment : Fragment() {
             val wineAdapter = WineAdapter(this.drinks) {
 
                // val directions: NavDirections = WineFragmentDirection.wineAction
-                findNavController().navigate(R.id.action_wineFragment_to_detailFragment,
+                findNavController().navigate(R.id.action_homeFragment_to_detailFragment,
                         bundleOf(ID_ARGS to it.drinkId)) }
 
             with(binding) {
@@ -59,7 +59,7 @@ class WineMianFragment : Fragment() {
     }
 
     companion object {
-        val  ID_ARGS = WineMianFragment::class.java.simpleName + "Dirnk-id"
+        val  ID_ARGS = WineMainFragment::class.java.simpleName + "Dirnk-id"
     }
 }
 

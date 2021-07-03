@@ -1,6 +1,5 @@
-package com.peculiaruc.wineshop.ui.fragment.winedetail
+package com.peculiaruc.wineshop.ui.fragment.winedetailNonAcoholic
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,9 +9,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import coil.load
 import com.peculiaruc.wineshop.api.Api
-import com.peculiaruc.wineshop.db.Repository
+import com.peculiaruc.wineshop.dataSource.Repository
 import com.peculiaruc.wineshop.databinding.FragmentDetailBinding
-import com.peculiaruc.wineshop.ui.fragment.winemain.WineMianFragment.Companion.ID_ARGS
+import com.peculiaruc.wineshop.ui.fragment.wineNonAcoholic.WineMainFragment.Companion.ID_ARGS
 import com.peculiaruc.wineshop.model.DrinkDetail
 
 
@@ -23,15 +22,17 @@ class WineDetailFragment : Fragment() {
 
 
     private val  viewModel: WineDetailViewModel by lazy {
-        ViewModelProvider(this, WineDetailViewModelFactory(Repository(Api.retrofitService,
+        ViewModelProvider(this, WineDetailViewModelFactory(
+            Repository(Api.retrofitService,
             requireContext()
-        )))
+        )
+        ))
                 .get(WineDetailViewModel::class.java)
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
        binding = FragmentDetailBinding.inflate(inflater, container, false)
         return binding.root

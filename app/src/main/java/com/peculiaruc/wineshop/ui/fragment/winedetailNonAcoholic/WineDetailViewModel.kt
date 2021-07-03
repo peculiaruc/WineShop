@@ -1,11 +1,11 @@
-package com.peculiaruc.wineshop.ui.fragment.winedetail
+package com.peculiaruc.wineshop.ui.fragment.winedetailNonAcoholic
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.peculiaruc.wineshop.db.Repository
+import com.peculiaruc.wineshop.dataSource.Repository
 import com.peculiaruc.wineshop.model.DrinkDetail
 import kotlinx.coroutines.launch
 

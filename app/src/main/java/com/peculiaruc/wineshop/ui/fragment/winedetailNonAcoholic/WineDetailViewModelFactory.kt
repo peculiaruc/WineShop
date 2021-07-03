@@ -1,8 +1,8 @@
-package com.peculiaruc.wineshop.ui.fragment.winedetail
+package com.peculiaruc.wineshop.ui.fragment.winedetailNonAcoholic
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.peculiaruc.wineshop.db.Repository
+import com.peculiaruc.wineshop.dataSource.Repository
 import java.lang.IllegalArgumentException
 
 class WineDetailViewModelFactory(private val repository: Repository): ViewModelProvider.Factory {

@@ -1,4 +1,4 @@
-package com.peculiaruc.wineshop.model.response
+package com.peculiaruc.wineshop.dataSource.response
 
 import com.peculiaruc.wineshop.model.Drink
 

@@ -1,7 +1,9 @@
-package com.peculiaruc.wineshop.db
+package com.peculiaruc.wineshop.dataSource
 
 import android.content.Context
 import com.peculiaruc.wineshop.api.RetrofitService
+import com.peculiaruc.wineshop.dataSource.local.db.WineDatabase
+import com.peculiaruc.wineshop.dataSource.local.db.WineEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

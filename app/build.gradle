@@ -94,5 +94,8 @@ dependencies {
     // optional - Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
 
+    //viewpager
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
 
 }

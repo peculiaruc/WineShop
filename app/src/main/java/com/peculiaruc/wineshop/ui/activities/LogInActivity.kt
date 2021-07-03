@@ -10,8 +10,7 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.peculiaruc.wineshop.R
 import com.peculiaruc.wineshop.api.Api.retrofitService
-import com.peculiaruc.wineshop.api.RetrofitService
-import com.peculiaruc.wineshop.db.Repository
+import com.peculiaruc.wineshop.dataSource.Repository
 
 class LogInActivity : AppCompatActivity() {
 

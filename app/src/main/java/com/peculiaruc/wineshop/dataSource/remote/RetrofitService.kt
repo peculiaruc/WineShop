@@ -1,7 +1,7 @@
 package com.peculiaruc.wineshop.api
 
-import com.peculiaruc.wineshop.model.response.DrinkDetailsResponse
-import com.peculiaruc.wineshop.model.response.DrinkResponse
+import com.peculiaruc.wineshop.dataSource.response.DrinkDetailsResponse
+import com.peculiaruc.wineshop.dataSource.response.DrinkResponse
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
@@ -12,6 +12,8 @@ import retrofit2.http.Query
 //https://www.thecocktaildb.com/api/json/v1/
 
 //https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic
+
+//https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic
 
 //https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
 
