@@ -53,7 +53,7 @@ class WineAlcoholicFragment : Fragment() {
             val wineAdapter = WineAdapter(this.drinks) {
 
                 // val directions: NavDirections = WineFragmentDirection.wineAction
-                findNavController().navigate(R.id.action_homeFragment_to_detailFragment,
+                findNavController().navigate(R.id.action_wineAlcoholicFragment_to_detailFragment,
                     bundleOf(ID_ARGS to it.drinkId)
                 ) }
 
