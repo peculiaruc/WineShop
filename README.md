@@ -1,5 +1,5 @@
 # WineShop
-An app that displays the different types of Non-Alcoholic wines and their details. It uses Room database to 
+An app that displays the different types of Non-Alcoholic CockTails, Alcoholic CockTails, Wines and their details. It uses Room database to 
 save users Login details.
 
 ## Features

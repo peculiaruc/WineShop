@@ -12,7 +12,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.peculiaruc.wineshop.R
 import com.peculiaruc.wineshop.api.Api.retrofitService
 import com.peculiaruc.wineshop.dataSource.Repository
-import com.peculiaruc.wineshop.dataSource.local.db.WineEntity
+import com.peculiaruc.wineshop.dataSource.local.db.UserEntity
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -47,7 +47,7 @@ class SignUpActivity : AppCompatActivity() {
 
         btnSignUp.setOnClickListener {
 
-            val contactAccount = WineEntity(
+            val userAccount = UserEntity(
                 0,
                 email = emailsp.text.toString(),
                 password = passwordsp.text.toString()
@@ -56,12 +56,12 @@ class SignUpActivity : AppCompatActivity() {
                 Toast.makeText(this, "All field are required", Toast.LENGTH_LONG).show()
             } else if (!validEmail(emailsp)) {
                 Toast.makeText(this, "Here must be filled with email", Toast.LENGTH_LONG).show()
-            } else if (wineRepository?.isExisting(contactAccount.email) == true) {
+            } else if (wineRepository?.isExisting(userAccount.email) == true) {
                 Toast.makeText(this, "Email exsist, sign in", Toast.LENGTH_LONG).show()
             } else {
 
 
-                wineRepository?.insertContacts(contactAccount)
+                wineRepository?.insertUser(userAccount)
                 Toast.makeText(this, "You have successfuly created an account", Toast.LENGTH_LONG)
                     .show()
                 val intent = Intent(this, LogInActivity::class.java)

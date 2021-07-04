@@ -6,18 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.peculiaruc.wineshop.R
+import com.peculiaruc.wineshop.databinding.FragmentRealWineBinding
 
 
 class RealWineFragment : Fragment() {
 
+    private lateinit var binding: FragmentRealWineBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_real_wine, container, false)
+        binding = FragmentRealWineBinding.inflate(inflater)
+        return binding.root
     }
 
-   fun bind(){
-  //     findNavController().navigate(<Destination or action>)
-   }
+
 }

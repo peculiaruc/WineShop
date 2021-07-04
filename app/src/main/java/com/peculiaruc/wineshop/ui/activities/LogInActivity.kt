@@ -53,7 +53,7 @@ class LogInActivity : AppCompatActivity() {
                 Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
             }
             else{
-                val isValid: Boolean = wineRepository.isValidContact(emailsI.text.toString().trim(), passwordsI.text.toString().trim()) == true
+                val isValid: Boolean = wineRepository.isValidUser(emailsI.text.toString().trim(), passwordsI.text.toString().trim()) == true
                 if (isValid) {
                     Toast.makeText(baseContext, "This is Contact Me", Toast.LENGTH_LONG).show()
                     val intent = Intent(this, MainActivity::class.java)

@@ -5,21 +5,21 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [WineEntity::class], version = 1)
-abstract class WineDatabase: RoomDatabase() {
+@Database(entities = [UserEntity::class], version = 1)
+abstract class UserDatabase: RoomDatabase() {
 
-        abstract fun contactDao(): WineDao
+        abstract fun userDao(): UserDao
 
         companion object {
             @Volatile
-            private var instance: WineDatabase? = null
+            private var instance: UserDatabase? = null
             private val LOCK = Any()
 
             operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
                 instance ?: buildDatabase(context)
             }
 
-            private fun buildDatabase(context: Context) = Room.databaseBuilder(context, WineDatabase::class.java, "contact.db").allowMainThreadQueries().build()
+            private fun buildDatabase(context: Context) = Room.databaseBuilder(context, UserDatabase::class.java, "contact.db").allowMainThreadQueries().build()
 
 
         }
