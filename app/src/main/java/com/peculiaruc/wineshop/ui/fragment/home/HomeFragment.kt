@@ -40,7 +40,7 @@ class HomeFragment : Fragment() {
             when(position) {
                 0 -> tab.text = "Non-Alcohlic CockTail"
                 1 -> tab.text = "Alcoholic CockTail"
-                2 -> tab.text = "Wines"
+                2 -> tab.text = "Wine"
                 else -> tab.text = "Position ${position + 1}"
             }
         }.attach()
