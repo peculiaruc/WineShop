@@ -22,5 +22,19 @@ class RealWineFragment : Fragment() {
         return binding.root
     }
 
+    private  fun initData() {
+        wineList = arrayListOf(
+            Wine("Ariel", R.drawable.ariel),
+            Wine("Ashon", R.drawable.ashton),
+            Wine("Chamdor", R.drawable.chamdor),
+            Wine("Chateau de Fleur", R.drawable.chateau_de_fleur),
+            Wine("Light Live", R.drawable.light_live),
+            Wine("Martinellis", R.drawable.martinellis),
+            Wine("Pierre", R.drawable.pierre)
+        )
+
+    }
+
+
 
 }

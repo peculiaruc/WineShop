@@ -1,4 +1,4 @@
-package com.peculiaruc.wineshop.adapter
+package com.peculiaruc.wineshop.ui.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter

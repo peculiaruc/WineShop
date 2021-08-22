@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.peculiaruc.wineshop.R
-import com.peculiaruc.wineshop.adapter.WineAdapter
+import com.peculiaruc.wineshop.ui.adapter.WineAdapter
 import com.peculiaruc.wineshop.api.Api
 import com.peculiaruc.wineshop.dataSource.Repository
 import com.peculiaruc.wineshop.databinding.FragmentWineBinding

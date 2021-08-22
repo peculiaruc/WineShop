@@ -11,15 +11,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.peculiaruc.wineshop.R
-import com.peculiaruc.wineshop.adapter.WineAdapter
+import com.peculiaruc.wineshop.ui.adapter.WineAdapter
 import com.peculiaruc.wineshop.api.Api
 import com.peculiaruc.wineshop.dataSource.Repository
 import com.peculiaruc.wineshop.databinding.FragmentWineAlcoholicBinding
-import com.peculiaruc.wineshop.databinding.FragmentWineBinding
 import com.peculiaruc.wineshop.model.Drink
 import com.peculiaruc.wineshop.ui.fragment.wineNonAcoholic.WineMainFragment
-import com.peculiaruc.wineshop.ui.fragment.wineNonAcoholic.WineMianViewModel
-import com.peculiaruc.wineshop.ui.fragment.wineNonAcoholic.WineViewModelFactory
 
 
 class WineAlcoholicFragment : Fragment() {
@@ -27,7 +24,7 @@ class WineAlcoholicFragment : Fragment() {
 
     private lateinit var binding: FragmentWineAlcoholicBinding
     private var drinks = mutableListOf<Drink>()
-    private lateinit var adapter: WineAdapter
+    private var adapter: WineAdapter? = null
 
     private val viewModel: WineAlcoholicViewModel by lazy {
         ViewModelProvider(this, WineAlcoholicViewModelFactory(
@@ -53,7 +50,7 @@ class WineAlcoholicFragment : Fragment() {
             val wineAdapter = WineAdapter(this.drinks) {
 
                 // val directions: NavDirections = WineFragmentDirection.wineAction
-                findNavController().navigate(R.id.action_wineAlcoholicFragment_to_detailFragment,
+                findNavController().navigate(R.id.action_homeFragment_to_detailFragment,
                     bundleOf(ID_ARGS to it.drinkId)
                 ) }
 
@@ -68,6 +65,6 @@ class WineAlcoholicFragment : Fragment() {
     }
 
     companion object {
-        val  ID_ARGS = WineAlcoholicFragment::class.java.simpleName + "Dirnk-id"
+        val  ID_ARGS = WineMainFragment::class.java.simpleName + "Dirnk-id"
     }
 }

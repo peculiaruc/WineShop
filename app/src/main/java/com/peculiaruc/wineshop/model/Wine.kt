@@ -4,6 +4,6 @@ import com.squareup.moshi.Json
 
 data class Wine (
     val wineName:String,
-    val wineImage:String
+    val wineImage:Int
 
 )

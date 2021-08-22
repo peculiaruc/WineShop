@@ -10,7 +10,6 @@
         android:name="com.peculiaruc.wineshop.ui.fragment.wineNonAcoholic.WineMainFragment"
         android:label="fragment_wine"
         tools:layout="@layout/fragment_wine" >
-
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -31,9 +30,6 @@
         android:name="com.peculiaruc.wineshop.ui.fragment.wineAcoholic.WineAlcoholicFragment"
         android:label="fragment_wine_alcoholic"
         tools:layout="@layout/fragment_wine_alcoholic" >
-        <action
-            android:id="@+id/action_wineAlcoholicFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
     </fragment>
     <activity
         android:id="@+id/logInActivity"
@@ -50,17 +46,15 @@
         android:name="com.peculiaruc.wineshop.ui.fragment.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+
     </fragment>
+    <action
+        android:id="@+id/action_homeFragment_to_detailFragment"
+        app:destination="@id/detailFragment" />
     <fragment
         android:id="@+id/realWineFragment"
         android:name="com.peculiaruc.wineshop.ui.fragment.realwine.RealWineFragment"
         android:label="fragment_real_wine"
-        tools:layout="@layout/fragment_real_wine" >
-        <action
-            android:id="@+id/action_realWineFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_real_wine" />
+
 </navigation>

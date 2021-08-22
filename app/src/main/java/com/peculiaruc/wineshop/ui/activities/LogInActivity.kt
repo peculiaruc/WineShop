@@ -55,7 +55,7 @@ class LogInActivity : AppCompatActivity() {
             else{
                 val isValid: Boolean = wineRepository.isValidUser(emailsI.text.toString().trim(), passwordsI.text.toString().trim()) == true
                 if (isValid) {
-                    Toast.makeText(baseContext, "This is Contact Me", Toast.LENGTH_LONG).show()
+                    Toast.makeText(baseContext, "Welcome to Wine Shop, what can we offer you?", Toast.LENGTH_LONG).show()
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 } else {

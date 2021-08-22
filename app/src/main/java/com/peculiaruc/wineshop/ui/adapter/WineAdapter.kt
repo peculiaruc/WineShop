@@ -1,4 +1,4 @@
-package com.peculiaruc.wineshop.adapter
+package com.peculiaruc.wineshop.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

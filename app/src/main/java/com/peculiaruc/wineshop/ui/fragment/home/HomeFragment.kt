@@ -8,8 +8,7 @@ import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.peculiaruc.wineshop.R
-import com.peculiaruc.wineshop.adapter.ViewPagerAdapter
+import com.peculiaruc.wineshop.ui.adapter.ViewPagerAdapter
 import com.peculiaruc.wineshop.databinding.FragmentHomeBinding
 
 
@@ -22,6 +21,8 @@ class HomeFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
+
+
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
