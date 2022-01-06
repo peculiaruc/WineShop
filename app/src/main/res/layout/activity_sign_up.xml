@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
+    android:background="@color/purple_500"
     tools:context=".ui.activities.SignUpActivity">
 
     <ImageView
@@ -42,7 +42,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="8dp"
-                android:hint="Namet"
+                android:hint="Name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">

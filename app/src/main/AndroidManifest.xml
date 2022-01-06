@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/splahs"
         android:supportsRtl="true"
         android:theme="@style/Theme.WineShop">
-        <activity android:name=".ui.activities.SplashScreen">
+        <activity android:name=".ui.activities.SplashScreen"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

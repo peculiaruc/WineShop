@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
+    android:background="@color/purple_500"
     tools:context=".ui.activities.LogInActivity">
 
     <com.google.android.material.card.MaterialCardView
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
                 android:layout_marginBottom="60dp"
-                android:backgroundTint="@color/teal_700"
+                android:backgroundTint="@color/purple_700"
                 android:text="LOGIN"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

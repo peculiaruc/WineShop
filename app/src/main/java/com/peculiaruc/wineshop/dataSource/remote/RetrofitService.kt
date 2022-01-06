@@ -17,6 +17,13 @@ import retrofit2.http.Query
 
 //https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
 
+//https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink
+ //https:www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail
+
+//https:www.thecocktaildb.com/api/json/v1/1/filter.php?g=Champagne_flute
+//https:www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass
+
+
 private val BASE_URL = "https://www.thecocktaildb.com/api/json/v1/"
 
 interface RetrofitService {
